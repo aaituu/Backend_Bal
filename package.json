@@ -1,0 +1,22 @@
+{
+  "name": "assignment-2-api",
+  "version": "1.0.0",
+  "description": "Node.js web application integrating Random User, REST Countries, Exchange Rate, and News APIs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0"
+  }
+}
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2: API Integration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>GLOBAL USER INFORMATION DASHBOARD</h1>
+        <p class="subtitle">
+          Discover random users and explore their country information
+        </p>
+      </header>
+
+      <div class="button-container">
+        <button id="fetchUserBtn" class="primary-btn">GET RANDOM USER</button>
+      </div>
+
+      <div id="loadingIndicator" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Loading user data...</p>
+      </div>
+
+      <div id="errorMessage" class="error-message hidden"></div>
+
+      <main id="contentArea" class="content-area hidden">
+        <!-- User Information Card -->
+        <section class="card user-card">
+          <h2>User Information</h2>
+          <div class="user-profile">
+            <img
+              id="profilePicture"
+              src=""
+              alt="Profile Picture"
+              class="profile-img"
+            />
+            <div class="user-details">
+              <div class="detail-row">
+                <span class="label">Name:</span>
+                <span id="userName" class="value"></span>
+              </div>
+              <div class="detail-row">
+                <span class="label">Gender:</span>
+                <span id="userGender" class="value"></span>
+              </div>
+              <div class="detail-row">
+                <span class="label">Age:</span>
+                <span id="userAge" class="value"></span>
+              </div>
+              <div class="detail-row">
+                <span class="label">Date of Birth:</span>
+                <span id="userDOB" class="value"></span>
+              </div>
+              <div class="detail-row">
+                <span class="label">City:</span>
+                <span id="userCity" class="value"></span>
+              </div>
+              <div class="detail-row">
+                <span class="label">Country:</span>
+                <span id="userCountry" class="value"></span>
+              </div>
+              <div class="detail-row">
+                <span class="label">Address:</span>
+                <span id="userAddress" class="value"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Country Information Card -->
+        <section class="card country-card">
+          <h2>Country Information</h2>
+          <div id="countryInfo" class="country-info">
+            <div class="country-header">
+              <img
+                id="countryFlag"
+                src=""
+                alt="Country Flag"
+                class="country-flag"
+              />
+              <h3 id="countryName" class="country-name"></h3>
+            </div>
+            <div class="country-details">
+              <div class="detail-row">
+                <span class="label">Capital:</span>
+                <span id="countryCapital" class="value"></span>
+              </div>
+              <div class="detail-row">
+                <span class="label">Official Language(s):</span>
+                <span id="countryLanguages" class="value"></span>
+              </div>
+              <div class="detail-row">
+                <span class="label">Currency:</span>
+                <span id="countryCurrency" class="value"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Exchange Rate Card -->
+        <section class="card exchange-card">
+          <h2>Exchange Rates</h2>
+          <div id="exchangeInfo" class="exchange-info">
+            <div class="exchange-rates">
+              <div class="rate-item">
+                <span class="rate-label"
+                  >1 <span id="baseCurrency"></span> =</span
+                >
+                <span class="rate-value" id="usdRate"></span>
+                <span class="rate-currency">USD</span>
+              </div>
+              <div class="rate-item">
+                <span class="rate-label"
+                  >1 <span id="baseCurrency2"></span> =</span
+                >
+                <span class="rate-value" id="kztRate"></span>
+                <span class="rate-currency">KZT</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- News Headlines Card -->
+        <section class="card news-card">
+          <h2> News Headlines</h2>
+          <div id="newsContainer" class="news-container">
+            <!-- News articles will be dynamically inserted here -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
